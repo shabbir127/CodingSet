@@ -28,6 +28,11 @@ public class StreamAPIEx {
 		List<Integer> list2=Arrays.asList(1,3,4,5,6,45,667,8,90,2);
 		
 		System.out.println(list2.stream().filter(i-> i % 2==0).toList());
+		System.out.println(1+2+"3"+4+5);
+		
+		System.out.println(list2.stream().filter(i-> i % 2==0).map(x->x /2).toList());
+		
+		
 		
 		
 		
