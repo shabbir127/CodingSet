@@ -30,7 +30,7 @@ public class StreamAPIEx {
 		System.out.println(list2.stream().filter(i-> i % 2==0).toList());
 		System.out.println(1+2+"3"+4+5);
 		
-		System.out.println(list2.stream().filter(i-> i % 2==0).map(x->x /2).toList());
+		System.out.println(list2.stream().filter(i-> i % 2==0).map(x->x /2).distinct().toList());
 		
 		
 		
