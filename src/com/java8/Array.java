@@ -30,14 +30,33 @@ public class Array {
 		}
 	}
 	
+	
+	public static int max(int arr[])
+	{
+		int max=arr[0];
+		for(int i=0 ; i < arr.length ;i++)
+		{
+			if(max < arr[i])
+			{
+				max=arr[i];
+			}
+		}
+		
+		return max;
+	}
+	
+	
+	
 	public static void main(String[] args) {
 	
 		int[] arr= {1,2,3,4,5,6,7};
 		System.out.println("Orginal array:- ");
 		print(arr);
-		reverse(arr);
-		System.out.println("\nReverse Array:- ");
-		print(arr);
+//		reverse(arr);
+//		System.out.println("\nReverse Array:- ");
+//		print(arr);
+		
+		System.out.println("\n Max value is -"+max(arr));
 	}
 
 }
