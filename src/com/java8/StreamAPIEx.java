@@ -35,9 +35,10 @@ public class StreamAPIEx {
 				sorted((a,b)->(b-a)).toList());
 		
 		
+		List<Integer> all=Arrays.asList(6,1,2,4,8,12,16,98);
+	
 		
-		
-		
+         System.out.println(all.stream().filter(i->i%2==0).map(i->i*i).reduce(0,Integer::sum));
 		
 	}
 }
