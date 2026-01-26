@@ -10,8 +10,6 @@ public class FunctionalInterfaceEX {
 		inter.m1();
 		
 		MyInter inter1= ()-> System.out.println("Second Lambda");
-		
-		
 		inter1.m1();
 	}
 
