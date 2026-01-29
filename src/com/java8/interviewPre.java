@@ -3,10 +3,10 @@ package com.java8;
 public class interviewPre {
 
 	public static void main(String[] args) {
-		functionalinter ex=()->{System.out.println();};
+		functionalinter ex=()->{System.out.println("Hello, Functional Interface...");};
 		ex.display();
 		
-		FunctionalInterfaceEx1 ex1=(a,b)->{System.out.println();};
+		FunctionalInterfaceEx1 ex1=(a,b)->{System.out.println("Sum:- "+ (a+b));};
 		ex1.sum(23, 34);
 	}
 }
