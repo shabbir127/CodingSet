@@ -1,5 +1,8 @@
 package com.java8;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class interviewPre {
 
 	public static void main(String[] args) {
@@ -13,8 +16,11 @@ public class interviewPre {
 			return a*b; };
 		System.out.print(ex2.mul(23, 34));
 		
+		List<String> list=Arrays.asList("apple", "banana", " ", "banana", " ",
+        "grapes", "apple", "banana");
 		
-		
+		List<String> result=list.stream().map(String:: trim).filter(i->!i.isEmpty()).distinct().toList();
+		System.out.println(result);
 		
 	}
 }
