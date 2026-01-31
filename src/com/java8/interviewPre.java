@@ -22,6 +22,10 @@ public class interviewPre {
 		List<String> result=list.stream().map(String:: trim).filter(i->!i.isEmpty()).distinct().toList();
 		System.out.println(result);
 		
+		String string= "9898989768754";
+		string="91"+string;
+		System.out.println(string);
+		
 	}
 }
 
