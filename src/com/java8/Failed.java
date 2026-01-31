@@ -45,7 +45,7 @@ public class Failed {
 
 
 enum PlanType {
-    PREMIUM, STANDARD, NORMAL
+    PREMIUM, STANDARD, NORMAL;
 }
 
 class Subscription {
