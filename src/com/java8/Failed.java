@@ -26,6 +26,18 @@ public class Failed {
 		                })
 		                .toList();   // use collect(Collectors.toList()) for Java 8
 
+		List<Subscription> updatedSubscriptions2=subscriptions.stream()
+				.filter(s-> s.getMonthlySpend() < 10000)
+				.filter(s->s.getPlanType()== PlanType.NORMAL
+				|| s.getPlanType() == PlanType.STANDARD)
+				.peek(s-> {
+					if(s.isStudent())
+					{
+						s.setMonthlySpend(s.getMonthlySpend() * 0.5);
+					}
+				}).toList();
+				
+		
 		
 		// Print result
         updatedSubscriptions.forEach(s ->
