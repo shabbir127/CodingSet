@@ -39,8 +39,20 @@ public class Failed {
 				
 		
 		
+		
 		// Print result
         updatedSubscriptions.forEach(s ->
+                System.out.println(
+                        s.getUserId() + " | " +
+                        s.getPlanType() + " | " +
+                        s.getMonthlySpend()
+                )
+        );
+        
+        
+		
+		// Print result
+        updatedSubscriptions2.forEach(s ->
                 System.out.println(
                         s.getUserId() + " | " +
                         s.getPlanType() + " | " +
