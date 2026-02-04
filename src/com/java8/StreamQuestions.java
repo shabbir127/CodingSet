@@ -16,6 +16,8 @@ public class StreamQuestions {
 		evenList.stream().filter(n -> n%2==0).forEach(n->System.out.print(n + " "));
 		
 		
+		int max=evenList.stream().mapToInt(Integer::intValue).max().orElse(0);
+		System.out.println("\n max value "+max);
 		
 		
 		
