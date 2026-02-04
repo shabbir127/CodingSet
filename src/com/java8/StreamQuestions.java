@@ -1,6 +1,7 @@
 package com.java8;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class StreamQuestions {
@@ -20,8 +21,8 @@ public class StreamQuestions {
 		System.out.println("\n max value "+max);
 		
 		
-		
-		
+		int SecondMax=evenList.stream().sorted(Comparator.reverseOrder()).distinct().skip(1).findFirst().orElseThrow();
+		System.out.println("\n second max value "+SecondMax);
 		
 		
 	}
