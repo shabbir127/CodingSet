@@ -52,6 +52,9 @@ public class StreamQuestions {
 		reStudents.stream().forEach(System.out::println);
 		System.out.println(reStudents.stream().count());
 		
+		String [] arr={"grapes","mango","pineapple"}; 
+	        Arrays.asList(arr);
+	        
 		
 	}
 }
