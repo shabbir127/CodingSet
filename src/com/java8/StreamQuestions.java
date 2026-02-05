@@ -3,6 +3,9 @@ package com.java8;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 
 public class StreamQuestions {
@@ -55,7 +58,17 @@ public class StreamQuestions {
 		String [] arr={"grapes","mango","pineapple"}; 
 	        Arrays.asList(arr);
 	        
-		
+	        double average=reStudents.stream().mapToDouble(s->s.getSalary()).average().orElseThrow();
+	        System.out.println(average);
+	        System.out.println(reStudents.stream().mapToDouble(s->s.getSalary()).average().orElse(0));
+	        
+	        
+	        List<String> str1=Arrays.asList("hello","hello","Duplicate","find","Duplicate","Duplicate");
+	        
+	        str1.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+	        
+	        System.out.println(str1.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));
+	        
 	}
 }
 
