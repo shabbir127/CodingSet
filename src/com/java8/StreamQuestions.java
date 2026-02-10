@@ -1,8 +1,11 @@
 package com.java8;
 
+import java.security.Identity;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -55,8 +58,7 @@ public class StreamQuestions {
 		reStudents.stream().forEach(System.out::println);
 		System.out.println(reStudents.stream().count());
 		
-		String [] arr={"grapes","mango","pineapple"}; 
-	        Arrays.asList(arr);
+		
 	        
 	        double average=reStudents.stream().mapToDouble(s->s.getSalary()).average().orElseThrow();
 	        System.out.println(average);
@@ -64,10 +66,44 @@ public class StreamQuestions {
 	        
 	        
 	        List<String> str1=Arrays.asList("hello","hello","Duplicate","find","Duplicate","Duplicate");
+	        List<String> str2=Arrays.asList("hello hello Duplicate find Duplicate Duplicate");
+	        String str3=("hello hello Duplicate find Duplicate Duplicate");
 	        
-	        str1.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+	        Map<String, Long> wordcount=Arrays.stream(str3.split(" ")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+	        
+	        
+	         //str2.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 	        
 	        System.out.println(str1.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));
+	        System.out.println(str2.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));
+	        System.out.println(wordcount);
+	        
+	        List<Integer> list = List.of(10,20,30,40);
+
+	        int max1 = list.stream().max(Integer::compare).orElse(0);
+	        int min1 = list.stream().min(Integer::compare).get();
+
+	        int secondHighest =
+	                list.stream()
+	                    .sorted(Comparator.reverseOrder())
+	                    .skip(1)
+	                    .findFirst()
+	                    .orElse(0);
+	        
+	       System.out.println("Max: "+ max1 +" Min: " + min1 + " SecondMax  : " +secondHighest);
+	       List<String> liststring = List.of("apple","banana","apple");
+
+	       Map<String, Long> freq =
+	    		   liststring.stream()
+	                   .collect(Collectors.groupingBy(
+	                       Function.identity(), Collectors.counting()));
+	       System.out.println(freq);
+	       
+	       String fruit="Apple is good for health , Apple is good for digestion , Apple is good for blood";
+	       
+	       Map<String, Long> fruitsMap=Arrays.stream(fruit.split(" ")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+	        System.out.println(fruitsMap);
 	        
 	}
 }
