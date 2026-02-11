@@ -3,6 +3,7 @@ package com.java8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class ArraySet {
 	
@@ -55,6 +56,9 @@ public class ArraySet {
 		
 		long countstring=strings.stream().count();
 		System.out.println("count of Strings " + countstring);
+		
+		Optional<Integer> ns =numbers.stream().findFirst();
+		System.out.println(ns.get());;
 		
 			}
 	
