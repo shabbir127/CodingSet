@@ -60,6 +60,8 @@ public class ArraySet {
 		Optional<Integer> ns =numbers.stream().findFirst();
 		System.out.println(ns.get());;
 		
+		boolean result=numbers.stream().anyMatch(n->n >7);
+		System.out.println(result);
 			}
 	
 	
