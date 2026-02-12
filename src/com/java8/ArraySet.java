@@ -65,6 +65,12 @@ public class ArraySet {
 		
 		List<Integer>list=numbers.stream().filter(s->s%2==0).toList();
 		System.out.println(list);
+		
+		int sum=list.stream().mapToInt(Integer::intValue).sum();
+		System.out.println("Sum:-" + sum);
+		
+		
+		
 			
 	}
 	
