@@ -62,6 +62,9 @@ public class ArraySet {
 		
 		boolean result=numbers.stream().anyMatch(n->n >7);
 		System.out.println(result);
+		
+		List<Integer>list=numbers.stream().filter(s->s%2==0).toList();
+		System.out.println(list);
 			}
 	
 	
