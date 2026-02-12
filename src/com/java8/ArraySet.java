@@ -2,8 +2,10 @@ package com.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 public class ArraySet {
 	
@@ -68,6 +70,9 @@ public class ArraySet {
 		
 		int sum=list.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("Sum:-" + sum);
+		
+		int max=list.stream().max(Integer::compare).get();
+		System.out.println("Max:- "+max);
 		
 		
 		
