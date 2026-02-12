@@ -65,7 +65,8 @@ public class ArraySet {
 		
 		List<Integer>list=numbers.stream().filter(s->s%2==0).toList();
 		System.out.println(list);
-			}
+			
+	}
 	
 	
 
