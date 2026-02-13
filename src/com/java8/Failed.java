@@ -25,6 +25,7 @@ public class Failed {
 		                    }
 		                })
 		                .toList();   // use collect(Collectors.toList()) for Java 8
+		
 
 		List<Subscription> updatedSubscriptions2=subscriptions.stream()
 				.filter(s-> s.getMonthlySpend() < 10000)
