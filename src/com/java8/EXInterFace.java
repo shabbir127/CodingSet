@@ -3,7 +3,7 @@ package com.java8;
 import java.util.Arrays;
 import java.util.List;
 
-public class interviewPre {
+public class EXInterFace {
 
 	public static void main(String[] args) {
 		functionalinter ex=()->{System.out.println("Hello, Functional Interface...");};
