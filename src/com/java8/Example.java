@@ -20,6 +20,12 @@ public class Example {
 		}
 		
 		System.out.println(list);
+		String vo="Hello";
+		
+		if(vo.matches(".*[aeiou].*"))
+		{
+			System.out.println("true");
+		}
 		
 		
 
@@ -29,8 +35,19 @@ public class Example {
 
 		 public static boolean stringContainsVowels(String input) {
 		  return input.toLowerCase().matches(".*[aeiou].*");
+		 
+		 
+		
+		 
+		 
+		 
+		 
+		 
+		 
 		 }
 		
+		 
+	
 	
 	
 	
