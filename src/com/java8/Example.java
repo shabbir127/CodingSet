@@ -27,14 +27,15 @@ public class Example {
 			System.out.println("true");
 		}
 		
-		
-
 		  System.out.println(stringContainsVowels("Hello")); // true
 		  System.out.println(stringContainsVowels("TV")); // false
 		 }
 
 		 public static boolean stringContainsVowels(String input) {
 		  return input.toLowerCase().matches(".*[aeiou].*");
+		 
+		  
+		  
 		 
 		 
 		
