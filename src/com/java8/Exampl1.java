@@ -1,6 +1,5 @@
 package com.java8;
 
-import java.util.Iterator;
 
 public class Exampl1 {
 	
@@ -8,27 +7,35 @@ public class Exampl1 {
 		String input="My name is Shabbir Khan";
 		System.out.println(input);
 		StringBuilder sb1=new StringBuilder();
-		StringBuilder sb2=new StringBuilder();
 		String v1=" ";
 	
-		String [] word=input.split(" ");
+		String [] words=input.split(" ");
 		
-		for(int i= word.length-1; i >=0; i--)
+		for(int i= words.length-1; i >=0; i--)
 		{
-			sb1.append(word[i] + " ");
+			sb1.append(words[i] + " ");
 			
 		}
 		System.out.println(sb1.toString());
 
-		for(int i=0; i< word.length;i++)
+		for(int i=0; i< words.length;i++)
 		{
-			v1= word[i] + " " +v1;
+			v1= words[i] + " " +v1;
 		}
 		
 		System.out.println(v1);
 			
 	
-	
+	// input :- java code 
+	// output:- avaj edoc
+		
+		for( String word : words)
+		{
+			for(int i= word.length()-1 ;i>=0;i--)
+			{
+				System.out.println("hello");
+			}
+		}
 	}
 
 }
