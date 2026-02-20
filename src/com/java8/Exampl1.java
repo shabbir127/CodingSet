@@ -18,6 +18,7 @@ public class Exampl1 {
 		}
 		System.out.println(sb1.toString());
 
+		//extra way to solve the problem
 		for(int i=0; i< words.length;i++)
 		{
 			v1= words[i] + " " +v1;
@@ -27,15 +28,26 @@ public class Exampl1 {
 			
 	
 	// input :- java code 
-	// output:- avaj edoc
 		
+
+	// output:- avaj edoc
+		//String input="My name is Shabbir Khan";
+		
+		String output= " ";
 		for( String word : words)
 		{
+			String revString="";	
 			for(int i= word.length()-1 ;i>=0;i--)
 			{
-				System.out.println("hello");
+		       
+		       revString=revString + word.charAt(i);
 			}
+			output=output+revString+" ";
 		}
+		
+		
+		System.out.println(output.trim());
+		
 	}
 
 }
