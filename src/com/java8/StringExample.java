@@ -1,5 +1,9 @@
 package com.java8;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class StringExample {
 	
 	public static void main(String[] args) {
@@ -38,8 +42,38 @@ public class StringExample {
 	System.out.println(removeduplicate);
 	
 	
+	Set<Character> set=new HashSet<>();
+	char [] charr=ogString.toCharArray();
+	for(int i=0;i<ogString.length();i++)
+	{
+		set.add(charr[i]);
+	}
+	for(char ch:set)
+	{
+		System.out.print(ch);
+	}
 	
 	
+	//reverse the string java code -> avaj edoc
+	
+	String input="Java code";
+	System.out.println("\n"+input);
+	String [] words=input.split(" ");
+	
+	String output=" ";
+	
+	for(String word1: words)
+	{
+		String revword="";
+		for(int i=word1.length()-1; i>=0;i--)
+		{
+			revword =revword+word1.charAt(i);
+		}
+		
+		output=output + revword+ " ";
+	}
+
+	System.out.println(output);
 	
 	
 	}
