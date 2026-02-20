@@ -17,7 +17,36 @@ public class StringExample {
 		}
 		
 		System.out.println(builder.toString());
-	}
+	
 
+	
+	
+	
+	// reverse string
+	
+	String ogString="Shabbir";
+	
+	for(int i=ogString.length()-1; i>=0;i--)
+	{
+		System.out.print(ogString.charAt(i));
+	}
+	System.out.println("\nremove Duplicate");
+	// remove Duplicate
+	StringBuilder removeduplicate=new StringBuilder();
+	ogString.chars().distinct().forEach(c->removeduplicate.append((char) c));
+	
+	System.out.println(removeduplicate);
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+	
 	
 }
