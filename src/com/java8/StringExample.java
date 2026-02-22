@@ -2,6 +2,8 @@ package com.java8;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class StringExample {
@@ -102,24 +104,46 @@ public class StringExample {
 	int count =1;
 	char [] arr=input1.toCharArray();
 	
-	for(int i=0; i< input.length() ;i++)
+	for(int i=0; i< input1.length() ;i++)
 	{
 		if(arr[i] == search)
 		{
-			arr[i]=(char) count;
+			arr[i]=String.valueOf(count).charAt(0);
 			count ++;
-		}else {
-			System.out.println("No repeating charchter found....");
 		}
-		
 	}
 	
 	for(char ch :arr)
 	{
-		System.out.println(ch);
+		System.out.print(ch);
 	}
 	
+	String input2="abbca";
+	String LongestSubString=null;
+	int LongestSubStringLength=0;
 	
+	Map<Character, Integer > map=new LinkedHashMap<Character, Integer>();
+	
+	char arr1[]=input2.toCharArray();
+	for(int i=0;i<input2.length();i++)
+	{
+		char ch=arr1[i];
+		if(!map.containsKey(ch))
+		{
+			map.put(ch, i);
+		}else {
+			i=map.get(ch);
+			map.clear();
+		}
+	}
+	
+	if (map.size() > LongestSubStringLength) {
+		LongestSubStringLength=map.size();
+		System.out.println("LongestSubStringLength "+ LongestSubStringLength);
+		LongestSubString=map.keySet().toString();
+		System.out.println("LongestSubString "+ LongestSubString);
+		
+	}
 	
 	
 	
