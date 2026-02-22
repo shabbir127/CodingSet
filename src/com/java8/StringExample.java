@@ -93,7 +93,35 @@ public class StringExample {
 	}
 	
 	
+	
+	
+	//opentext --->open1ex2
+	
+	String input1="opentext";
+	char search ='t';
+	int count =1;
+	char [] arr=input1.toCharArray();
+	
+	for(int i=0; i< input.length() ;i++)
+	{
+		if(arr[i] == search)
+		{
+			arr[i]=(char) count;
+			count ++;
+		}else {
+			System.out.println("No repeating charchter found....");
+		}
+		
+	}
+	
+	for(char ch :arr)
+	{
+		System.out.println(ch);
 	}
 	
 	
+	
+	
+	
+	}
 }
