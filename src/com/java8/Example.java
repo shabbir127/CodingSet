@@ -20,6 +20,7 @@ public class Example {
 		}
 		
 		System.out.println(list);
+		//checking vowles in string
 		String vo="Hello";
 		
 		if(vo.matches(".*[aeiou].*"))
