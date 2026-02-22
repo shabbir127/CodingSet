@@ -42,6 +42,10 @@ public class ArrayEx1 {
 		{
 			System.out.print(printresult + " ");
 		}
+		
+		
+		
+		
 	}
 
 }
