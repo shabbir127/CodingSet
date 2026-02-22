@@ -76,11 +76,24 @@ public class StringExample {
 	System.out.println(output);
 	
 	
+	
+	
+	
+	//AABBCDEBED
+	
+	String string="AABBCDEBEDCF";
+	
+	
+	for(char ch : string.toCharArray())
+	{
+		if (string.indexOf(ch) == string.lastIndexOf(ch)) {
+			System.out.println("First Non-repeated :- "+ ch);
+			break;
+		}
 	}
 	
 	
-	
-	
+	}
 	
 	
 }
