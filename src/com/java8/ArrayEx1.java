@@ -1,5 +1,8 @@
 package com.java8;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ArrayEx1 {
 	public static void main(String[] args) {
 		
@@ -44,6 +47,19 @@ public class ArrayEx1 {
 		}
 		
 		
+		String input[]={"apple","  ", "ant","banana","apple","mango"," " };
+		Set<String>set=new HashSet<String>();	
+		for(String n:input)
+		{
+			if(!n.isEmpty())
+			{
+				if (n.startsWith("a")) {
+					set.add(n);
+					
+				}
+			}
+		}
+		System.out.println(set);
 	
 		
 		
