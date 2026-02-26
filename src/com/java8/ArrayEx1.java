@@ -60,7 +60,27 @@ public class ArrayEx1 {
 			}
 		}
 		System.out.println(set);
+		
+		//missing number in array..
+		
+		int arr[]= {1,2,3,4,6};
+		int n=arr.length+1;
+		int sum=n*(n+1)/2;
+		for(int number : arr)
+		{
+			sum =sum - number;
+		}
+		System.out.println(sum);
+		
 	
+		String  name="S h a bb i r";
+		String nmaeString="S!h@a#bb%i^r()";
+		
+		String correctString=name.replaceAll("\\s", "");
+		String coString=nmaeString.replaceAll("[^a-zA-Z0-9]", "");
+		
+		System.out.println(correctString);
+		System.out.println(coString);
 		
 		
 		
