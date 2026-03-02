@@ -46,8 +46,9 @@ public class ThreadEX {
 		exector.shutdown();
 		System.out.println("Completed....");
        
-       
-		
+       Runnable taskRunnable=(()-> System.out.println(20+30));
+       Future<?> future=exector.submit(taskRunnable);
+		System.out.println(future.get());
 	}
 }
 
