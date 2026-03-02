@@ -1,14 +1,27 @@
 package com.java8;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class ThreadEX {
 
 	public static void main(String[] args) {
 		
-		for(int i=0 ; i < 10 ;i++)
+//		for(int i=0 ; i < 10 ;i++)
+//		{
+//			Thread t1=new Thread(new Task(i));
+//			t1.start();
+//		}
+		
+		ExecutorService executor=Executors.newFixedThreadPool(3);
+		for(int i=1 ; i <= 10 ;i++)
 		{
-			Thread t1=new Thread(new Task(i));
-			t1.run();
+			executor.execute(new Task(i));
 		}
+		
+		executor.shutdown();
+		
 	}
 }
 
