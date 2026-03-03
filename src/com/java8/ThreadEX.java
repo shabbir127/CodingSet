@@ -43,12 +43,13 @@ public class ThreadEX {
 		System.out.println(SquareRoot.get());
 		System.out.println(Factorail.get());
 		
-		exector.shutdown();
+		
 		System.out.println("Completed....");
        
        Runnable taskRunnable=(()-> System.out.println(20+30));
        Future<?> future=exector.submit(taskRunnable);
 		System.out.println(future.get());
+		exector.shutdown();
 	}
 }
 
@@ -68,6 +69,7 @@ public class ThreadEX {
 //		System.out.println("Task "  +taskId + " is running on threads: " +
 //	                            Thread.currentThread().getName());
 //	} }
+
 
 
 
