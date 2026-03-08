@@ -60,16 +60,45 @@ public class Practice {
             }
         }
         
-        //
-        
-        
-
 		}
 		
+	
+	//check anagram
+    
+    public static boolean AnagramString()
+    {
+    	String s1="listen";
+    	String s2="salent";
+    	
+    	int count[]=new int[256];
+    	
+    	if (s1.length() != s2.length()) {
+			System.out.println("This is not anagram String....");
+		      return false;
+		}
+    	
+    	for(int i=0;i<s1.length();i++)
+    	{
+    		count[s1.charAt(i)]++;
+    		count[s2.charAt(i)]--;
+    		
+    	}
+    	for(int c:count)
+    	{
+    		if(c!=0)
+    		{
+    			return false;
+    		}
+    	}
+    	
+    	return true;
+    }
+    
 	
 	
 	public static void main(String[] args) {
 		revserString();
+		System.out.println("The String is AnagramString  "+AnagramString());;
 	}
 
 }
