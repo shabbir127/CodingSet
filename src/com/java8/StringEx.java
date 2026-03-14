@@ -1,5 +1,7 @@
 package com.java8;
 
+import java.util.Arrays;
+
 public class StringEx {
 	
 	
@@ -24,10 +26,23 @@ public class StringEx {
 		System.out.println(max);
 	}
 	
+	public static void sortLastDigit()
+	{
+	   Integer arr[]= {12,23,34,56,78,21,42};
+	   
+	   Arrays.sort(arr,(a,b) -> (b % 10)  - (a % 10));
+	   
+	   System.out.println(Arrays.toString(arr));
+	   
+	  
+	   
+	  
+	   
+	}
 	
 	public static void main(String[] args) {
 		
-		
+		sortLastDigit();
 	
 	
 	
