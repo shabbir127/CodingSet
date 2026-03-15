@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 public class StringEx {
 	
-	
-	
 	public static void secondMax()
 	{
         int arr[]= {12,2,35,34,56,34,56,57};
