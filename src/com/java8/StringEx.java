@@ -31,11 +31,7 @@ public class StringEx {
 	   Arrays.sort(arr,(a,b) -> (b % 10)  - (a % 10));
 	   
 	   System.out.println(Arrays.toString(arr));
-	   
-	  
-	   
-	  
-	   
+	      
 	}
 	
 	public static void main(String[] args) {
