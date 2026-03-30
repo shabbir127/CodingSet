@@ -46,8 +46,12 @@ public class TechM {
     }
 
 	public static void main(String[] args) {
+       final int a=10;
+       System.out.println(a);
+       
 		Set<Employe> set=new HashSet<>();
 		HashSet<Employe> hset=new HashSet<>();
+		
 		
 		Employe e1=new Employe();
 		Employe e2=new Employe();
@@ -73,6 +77,9 @@ public class TechM {
 		m.deadlock();
 		
 		System.out.println(map);
+		 Animal am = new Dog(); // ✅ allowed
+	        am.sound();
+	        am.display();
 		
 	}
 
@@ -115,4 +122,20 @@ class Employe{
 	}
 	
 }
+
+
+abstract class Animal {
+    abstract void sound();
+    void display()
+    {
+    	System.out.println("non abstract method...");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
 	
