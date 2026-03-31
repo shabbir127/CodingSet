@@ -1,8 +1,9 @@
 package com.java8;
 
-
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
@@ -74,12 +75,27 @@ public class TechM {
 		map.put(1, e2);
 		
 		TechM m=new TechM();
-		m.deadlock();
+		//m.deadlock();
 		
 		System.out.println(map);
 		 Animal am = new Dog(); // ✅ allowed
 	        am.sound();
 	        am.display();
+	       
+	        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
+	        list.add("A");
+	        list.add("B");
+
+	       
+	        Iterator<String> it = list.iterator();
+	       
+
+	        list.add("C"); // modification allowed
+
+	        while (it.hasNext()) {
+	            System.out.println(it.next());
+	        }
+	        
 		
 	}
 
