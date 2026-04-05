@@ -11,6 +11,7 @@ public class USTFailed {
 	
 public static void main(String[] args) {
 	
+	
 	List<Integer> list1= Arrays.asList(12,3,4,5,7); //
 	//list.add(22);
 	list1.set(1, 22);
